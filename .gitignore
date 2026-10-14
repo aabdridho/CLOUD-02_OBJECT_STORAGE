@@ -1,0 +1,15 @@
+# Environment credentials
+.env
+.env.*
+!.env.example
+
+# Generated restore files
+restored-data/
+
+# Microsoft Office temporary files
+~$*
+*.tmp
+
+# Operating system files
+.DS_Store
+Thumbs.db

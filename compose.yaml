@@ -1,0 +1,21 @@
+services:
+  seaweedfs:
+    image: chrislusf/seaweedfs:latest
+    container_name: cloud02-seaweedfs
+
+    environment:
+      AWS_ACCESS_KEY_ID: aabdridho
+      AWS_SECRET_ACCESS_KEY: 123456t8A!
+      S3_BUCKET: primary-data,backup-data
+
+
+    ports:
+      - "127.0.0.1:8333:8333"
+
+    volumes:
+      - seaweedfs_data:/data
+
+    restart: unless-stopped
+
+volumes:
+  seaweedfs_data:
